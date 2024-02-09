@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const route = require('./routes/routes.js');
+const route = require('./routes/routes');
 const mongoose = require('mongoose');
-const cors = require('cors');
+const cors = require('cors'); 
 const app = express();
 const dotenv= require("dotenv");
 
@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-mongoose.connect("mongodb+srv://16039233:16039233@hariom-semwal.ylnslae.mongodb.net/Hariom-Semwal", {
+mongoose.connect("mongodb+srv://16039233:16039233@hariom-semwal.ylnslae.mongodb.net/assignment", {
     useNewUrlParser: true
 })
 .then( () => console.log("MongoDb is connected"))
